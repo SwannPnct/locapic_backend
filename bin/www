@@ -27,6 +27,9 @@ io.on('connection', (socket) => {
   socket.on("sendMessage", (obj) => {
     io.emit("sendMessageToAll", obj)
   })
+  socket.on("sendLocation", (obj) => {
+    io.emit("sendLocationToAll", obj)
+  })
 })
 
 /**
